@@ -1,0 +1,37 @@
+mat-grid-tile {
+    background: lightslategrey;
+  }
+
+  body {
+    background-color: #3353FF;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  #main-container{
+    margin: 150px auto;
+    width: 600px;
+  }
+
+  table{
+    background-color: white;
+    text-align: left;
+    border-collapse: collapse;
+    width: 100%;
+  }
+
+  th, td{
+    border: 20px;
+  }
+
+  thead{
+    background-color: rgb(19, 19, 77);
+    border-bottom: solid 5px #e3e4e9;
+    color: white;
+  }
+  tr:nth-last-child(even){
+    background-color: #ddd;
+  }
+  tr:hover td{
+    background-color: #369681;
+      color: white;
+  }

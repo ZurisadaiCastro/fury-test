@@ -1,0 +1,194 @@
+<div class="row">
+
+  <div class="col-md-3">
+
+    <h3>Carga el archivo .csv</h3>
+
+    Single
+    <input type="file" ng2FileSelect [uploader]="uploader" />
+    <!-- <button mat-button color='warn' (click)="onClick()">
+      <mat-icon>file_upload</mat-icon>
+      {{text}}
+    </button>  -->
+</div>
+<div>
+	  <!-- <mat-form-field>
+	    <ngx-mat-file-input [formControl]= "fileControl" [multiple]="multiple" [accept]="accept" [color]="color">
+	    </ngx-mat-file-input>
+	  </mat-form-field> -->
+
+  
+<!-- </div>
+ <ul>
+  <li *ngFor="let file of files" [@fadeInOut]="file.state">
+    <mat-progressbar [value]="file.progress"></mat-progressbar>
+    <span id="file-label">
+      {{file.data.name}}
+      <a tittle="Retry" {click}="retryFile(file)" *ngIf="file.canRetry">
+        <mat-icon>Refrescar</mat-icon></a>
+      <a tittle="Cancel" {click}="cancelFile(file)" *ngIf="file.canCancel">
+        <mat-icon>Cancelar</mat-icon></a>
+    </span>
+  </li>
+</ul>
+ <input
+  type="file"
+  id="fileUpload"
+  name="fileUpload"
+  multiple="multiple"
+  accept="{{accept}}"
+  style="display:none;"
+  />
+  </div> -->
+  
+
+  
+  <div class="col-md-9" style="margin-bottom: 40px">
+      <h3> Fila de carga</h3>
+      <p>Plantilla en carga</p>
+      <div>
+      <table class="table">
+        <thead>
+          <tr>
+            <th width="50%">Nombre</th>
+            <th>Tamano</th>
+            <th>Cargando</th>
+            <th>Accion</th>
+        </tr>
+        </thead>
+      <tbody>
+      <tr *ngFor="let item of uploader.queue">
+          <td><strong>{{ item?.file?.name }}</strong></td>
+          <td *ngIf="uploader.options.isHTML5" nowrap>{{ item?.file?.size/1024/1024 | number:'.2' }} MB</td>
+          <td *ngIf="uploader.options.isHTML5">
+              <div>
+                <mat-progress-bar mode="indeterminate">
+                </mat-progress-bar>
+              </div>
+          </td>
+          <td class="text-center">
+              <span *ngIf="item.isSuccess"><i class="glyphicon glyphicon-ok"></i></span>
+              <span *ngIf="item.isCancel"><i class="glyphicon glyphicon-ban-circle"></i></span>
+              <span *ngIf="item.isError"><i class="glyphicon glyphicon-remove"></i></span>
+          </td>
+       
+          <td nowrap>
+            <button mat-raised-button color="accent"> 
+              Cargar
+            </button>
+            <button mat-raised-button color="primary">
+              Cancelar
+              </button>
+            <button mat-raided-button color="warn">
+              Eliminar
+            </button>
+          </td>
+          <mat-grid-list cols="4" rowHeight="100px">
+            <mat-grid-tile *ngFor="let tile of tile" [colspan]="tile.cols" [rowspan]="tile.rows"
+                            [style.background]="tile.color">
+                {{tile.text}}
+            </mat-grid-tile>
+          </mat-grid-list>
+      </tr>
+      </tbody>
+  </table>
+</div>
+<div>
+
+</div>
+  <div>
+
+<!--Table-->
+<table>
+
+  <!--Table head-->
+  <thead>
+      <tr>
+          <th>#</th>
+          <th>Nombre de la pestaña</th>
+          <th>ID del registro involucrado</th>
+          <th>Fecha y hora de operación</th>
+          <th>Mensaje</th>
+      </tr>
+  </thead>
+  <!--Table head-->
+
+  <!--Table body-->
+  <tbody>
+      <tr class="table-info">
+          <th scope="row">1</th>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+
+      </tr>
+      <tr>
+          <th scope="row">2</th>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+
+      </tr>
+      <tr class="table-info">
+          <th scope="row">3</th>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+
+      </tr>
+      <tr>
+          <th scope="row">4</th>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+      </tr>
+      <tr>
+        <th scope="row">5</th>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+      <th scope="row">6</th>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+  </tr>
+  <tr>
+    <th scope="row">7</th>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+</tr>
+<tr>
+  <th scope="row">8</th>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+</tr>
+
+  </tbody>
+  <!--Table body-->
+
+
+</table>
+<!--Table-->
+  </div>
+
+  </div>
+
+
+
+  </div>
